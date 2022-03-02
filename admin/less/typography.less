@@ -1,0 +1,259 @@
+@import 'global';
+
+
+@font-face {
+    font-family: 'texgyreadventor_regular';
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot');
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.woff') format('woff'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.svg#texgyreadventor_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texgyreadventor_bold';
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot');
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.woff') format('woff'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.svg#texgyreadventor_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shuffle_admin';
+    src:url('@{font_path}shuffle_admin/shuffle_admin.eot');
+    src:url('@{font_path}shuffle_admin/shuffle_admin.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}shuffle_admin/shuffle_admin.ttf') format('truetype'),
+        url('@{font_path}shuffle_admin/shuffle_admin.woff') format('woff'),
+        url('@{font_path}shuffle_admin/shuffle_admin.svg#shuffle_admin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before {
+    font-family: 'shuffle_admin';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+        /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 2px;
+}
+
+
+
+.icon_arrow-up:before {
+    content: "\e600";
+}
+.icon_arrow-right:before {
+    content: "\e601";
+}
+.icon_arrow-down:before {
+    content: "\e602";
+}
+.icon_arrow-left:before {
+    content: "\e603";
+}
+.icon_wrench:before {
+    content: "\e604";
+}
+.icon_remove:before {
+    content: "\e605";
+}
+.icon_cog:before {
+    content: "\e606";
+}
+.icon_spinner:before {
+    content: "\e607";
+}
+.icon_search:before {
+    content: "\e608";
+}
+.icon_music:before {
+    content: "\e609";
+}
+.icon_play_3:before {
+    content: "\e60a";
+}
+.icon_list:before {
+    content: "\e60b";
+}
+.icon_play:before {
+    content: "\e60c";
+}
+.icon_pause:before {
+    content: "\e60d";
+}
+.icon_stop:before {
+    content: "\e60e";
+}
+.icon_backward:before {
+    content: "\e60f";
+}
+.icon_forward:before {
+    content: "\e610";
+}
+.icon_first:before {
+    content: "\e611";
+}
+.icon_last:before {
+    content: "\e612";
+}
+.icon_eject:before {
+    content: "\e613";
+}
+.icon_shuffle:before {
+    content: "\e614";
+}
+.icon_loop:before {
+    content: "\e615";
+}
+.icon_plus:before {
+    content: "\e616";
+}
+.icon_minus:before {
+    content: "\e617";
+}
+.icon_checkmark:before {
+    content: "\e618";
+}
+.icon_close:before {
+    content: "\e619";
+}
+.icon_tag:before {
+    content: "\e61a";
+}
+.icon_cd {
+    margin-bottom: 4px;
+    &:before {
+        content: "\2609";
+    }
+}
+.icon_user:before {
+    content: "\2689";
+}
+
+
+
+
+.font-size(@font-size) {
+    font-size: @font-size + 0px;
+    line-height: @font-size + 2px;
+}
+
+.leading(@line-height) {
+    line-height:@line-height + 0px;
+}
+
+.bold, strong, b {
+ font-family: 'texgyreadventor_bold', Arial, sans-serif;
+}
+
+*{
+    font-family: 'texgyreadventor_regular', Arial, sans-serif;
+    color:@color_grey_dark;
+}
+
+body {
+} 
+
+a {
+    color: @color_grey_dark;
+}
+
+a:hover {
+   // text-decoration: underline;
+}
+
+
+.header {
+    ul {
+        li {
+            .text {
+                color: @color_black;
+                .font-size(16);
+            }
+            .icon{
+                color: @color_black;
+                .font-size(20);
+            }
+
+              &.active,
+            &:hover {
+                 .text,
+                 .icon {
+                 color: lighten(@color_black,20%);     
+                 }
+            }
+        }
+
+    }
+}
+
+.button {
+    color: #ffffff;
+    .text,
+    .icon{
+        color: #ffffff;
+    }
+}
+
+.feature_button {
+    text-align: center;
+    color: #ffffff;
+    
+    .icon,
+    .text{
+        color: #ffffff;
+        p {
+            color: lighten(@color_black,30%);    
+            .font-size(30); 
+        }
+    }
+
+    .icon {
+        .font-size(80);
+    }
+
+    &:hover,
+    &.active  {
+        .icon,
+        .text{
+            p{
+             color: #ffffff;
+            }
+        }
+    }
+}
+
+.status {
+    color: @color_green;
+    .icon {
+        color: @color_green;
+        .font-size(24);
+    }
+}
+
+.fields_wrapper {
+    .title {
+        .font-size(26);
+    }
+    .subtitle {
+        .font-size(20); 
+        margin-bottom: @v_gutter/2;
+    }
+}
+
+
+
+.song_title {
+    .font-size(14);
+}
