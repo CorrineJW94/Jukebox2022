@@ -1,0 +1,180 @@
+@import 'global';
+
+
+@font-face {
+    font-family: 'texgyreadventor_regular';
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot');
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.woff') format('woff'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.svg#texgyreadventor_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texgyreadventor_bold';
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot');
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.woff') format('woff'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.svg#texgyreadventor_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shufflebar_font';
+    src:url('@{font_path}shufflebar_font/shufflebar_font.eot');
+    src:url('@{font_path}shufflebar_font/shufflebar_font.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}shufflebar_font/shufflebar_font.ttf') format('truetype'),
+        url('@{font_path}shufflebar_font/shufflebar_font.woff') format('woff'),
+        url('@{font_path}shufflebar_font/shufflebar_font.svg#shufflebar_font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before {
+    font-family: 'shufflebar_font';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.icon_cross:before {
+    content: "\e602";
+}
+.icon_arrow_top:before {
+    content: "\e603";
+}
+.icon_arrow_right:before {
+    content: "\e604";
+}
+.icon_arrow_left:before {
+    content: "\e605";
+}
+.icon_tick:before {
+    content: "\e600";
+}
+.icon_arrow_down:before {
+    content: "\e601";
+}
+.icon_close:before {
+    content: "\e606";
+}
+.icon_plus:before {
+    content: "\e607";
+}
+
+
+
+.font-size(@font-size) {
+    font-size: @font-size + 0px;
+    line-height: @font-size + 2px;
+}
+
+.leading(@line-height) {
+    line-height:@line-height + 0px;
+}
+
+.bold, strong, b {
+ font-family: 'texgyreadventor_bold', Arial, sans-serif;
+}
+
+*{
+    font-family: 'texgyreadventor_regular', Arial, sans-serif;
+    color:@color_grey_dark;
+}
+
+body {
+} 
+
+a {
+    color: @color_grey_dark;
+}
+
+a:hover {
+   // text-decoration: underline;
+}
+
+
+.section {
+    .impact {
+        text-transform: uppercase;
+        h2 {
+            .font-size(54);
+            color:#424242;
+            font-family: 'texgyreadventor_regular', Arial, sans-serif;
+        }
+        h1 {
+            .font-size(80);
+            color:#424242;
+            font-family: 'texgyreadventor_bold', Arial, sans-serif;
+        }
+    }
+    .content{
+        p{
+            text-align: center;
+            .font-size(48);
+            .leading(66);
+            margin: @v_gutter auto;
+            color: #7F7F7F;
+            max-height: 110px;
+            overflow: hidden;
+
+            &.name {
+                font-family: 'texgyreadventor_bold', Arial, sans-serif;
+            }
+
+            &.custom_text_2{
+                .font-size(36);
+                .leading(60);
+
+                &.marquee {
+                    -webkit-marquee: auto medium infinite scroll normal; 
+                    overflow-x: -webkit-marquee;
+                    height: 60px;
+                    >div{
+                        height: 60px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .header {
+        text-align: center;
+        .font-size(22);
+        font-family: 'texgyreadventor_bold', Arial, sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .copy {
+        text-align: center;
+        .icon {
+            .font-size(90);
+             text-align: center;
+             margin: 0 auto;
+        }
+        .title {
+           .font-size(36);
+            text-transform: uppercase;
+            font-family: 'texgyreadventor_bold',Arial,sans-serif;
+             text-align: center;
+             margin: 0 auto;
+        }
+        p {
+           font-family: 'texgyreadventor_regular', Arial, sans-serif; 
+           .font-size(14);
+           .leading(18);
+             text-align: center;
+             margin: 0 auto;
+
+        }
+    }
+}

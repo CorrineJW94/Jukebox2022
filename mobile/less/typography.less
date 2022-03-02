@@ -1,0 +1,260 @@
+@import 'global';
+
+
+@font-face {
+    font-family: 'texgyreadventor_regular';
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot');
+    src:url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.woff') format('woff'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_regular/texgyreadventor_regular.svg#texgyreadventor_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texgyreadventor_bold';
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot');
+    src:url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.woff') format('woff'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.ttf') format('truetype'),
+        url('@{font_path}texgyreadventor_bold/texgyreadventor_bold.svg#texgyreadventor_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shufflebar_font';
+    src:url('@{font_path}shufflebar_font/shufflebar_font.eot');
+    src:url('@{font_path}shufflebar_font/shufflebar_font.eot?#iefix') format('embedded-opentype'),
+        url('@{font_path}shufflebar_font/shufflebar_font.ttf') format('truetype'),
+        url('@{font_path}shufflebar_font/shufflebar_font.woff') format('woff'),
+        url('@{font_path}shufflebar_font/shufflebar_font.svg#shufflebar_font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before {
+    font-family: 'shufflebar_font';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.icon_cross:before {
+    content: "\e602";
+}
+.icon_arrow_top:before {
+    content: "\e603";
+}
+.icon_arrow_right:before {
+    content: "\e604";
+}
+.icon_arrow_left:before {
+    content: "\e605";
+}
+.icon_tick:before {
+    content: "\e600";
+}
+.icon_arrow_down:before {
+    content: "\e601";
+}
+.icon_close:before {
+    content: "\e606";
+}
+.icon_plus:before {
+    content: "\e607";
+}
+.icon_cd:before {
+    content: "\2609";
+}
+.icon_user:before {
+    content: "\2689";
+}
+
+
+.font-size(@font-size) {
+    font-size: @font-size + 0px;
+    line-height: @font-size + 2px;
+}
+
+.leading(@line-height) {
+    line-height:@line-height + 0px;
+}
+
+.bold, strong {
+ font-family: 'texgyreadventor_bold', Arial, sans-serif;
+}
+
+*{
+    font-family: 'texgyreadventor_regular', Arial, sans-serif;
+    color:@color_grey_dark;
+}
+
+body {
+} 
+
+a {
+    color: @color_grey_dark;
+}
+
+a:hover {
+   // text-decoration: underline;
+}
+
+
+.section {
+    .content{
+        p{
+            text-align: left;
+            .font-size(15);
+        }
+    }
+
+    .header {
+        text-align: center;
+        .font-size(22);
+        font-family: 'texgyreadventor_bold', Arial, sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .copy {
+        text-align: center;
+        .icon {
+            .font-size(90);
+             text-align: center;
+             margin: 0 auto;
+        }
+        .title {
+           .font-size(36);
+            text-transform: uppercase;
+            font-family: 'texgyreadventor_bold',Arial,sans-serif;
+             text-align: center;
+             margin: 0 auto;
+        }
+        .subtitle {
+           .font-size(20);
+            text-transform: uppercase;
+            font-family: 'texgyreadventor_regular',Arial,sans-serif;
+             text-align: center;
+             margin: 0 auto;
+        }
+        p {
+           font-family: 'texgyreadventor_regular', Arial, sans-serif; 
+           .font-size(14);
+           .leading(18);
+             text-align: center;
+             margin: 0 auto;
+
+        }
+
+        .message_selected,.name {
+            .font-size(14);
+            font-family: 'texgyreadventor_bold',Arial,sans-serif;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .name {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.button,
+.close_popup_button {
+    .font-size(14);
+     text-transform: uppercase;
+    color: #fff;
+    font-family: 'texgyreadventor_bold', Arial, sans-serif;
+
+    .icon,
+    .icon:before {
+      color: #fff;
+      .font-size(14);  
+    }
+
+    &.purple {
+        .font-size(24);
+    }
+}
+
+
+.list_scroller {
+
+    .letter_section {
+
+        .letter_margin {
+            p{
+                color:#fff;
+                .font-size(32);
+                margin-top: @v_gutter/4;
+                font-family: 'texgyreadventor_bold', Arial, sans-serif;
+            }
+        }
+
+        .artist_list {
+            .artist {
+                text-align: left;
+                font-family: 'texgyreadventor_bold', Arial, sans-serif;
+            }
+        }
+
+    }
+
+
+.track {
+
+    .number_margin {
+      
+        p{
+            color:#fff;
+            .font-size(20);
+            margin-top: @v_gutter/4;
+        }
+    } 
+    .name {
+      text-align: left;
+      font-family: 'texgyreadventor_bold', Arial, sans-serif;
+    }
+    .duration {
+       text-align: center;
+    } 
+}
+
+}
+
+.field {
+
+    input, textarea {
+        text-transform: uppercase;
+        font-family: 'texgyreadventor_bold', Arial, sans-serif;
+    }
+
+}
+
+
+.warning_rotation {
+    .font-size(26);
+    text-align: center;
+}
+
+.alphabety_selecty{
+
+    .alphabet{
+        text-align: center;
+        .font-size(11);
+        .leading(16);
+
+        &.active{
+            .font-size(30);
+            .leading(28);
+            left:-40px;
+            background-color: #ffffff;
+            z-index: 999;
+        }
+    }
+}

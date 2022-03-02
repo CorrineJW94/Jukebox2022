@@ -1,0 +1,6 @@
+chmod +a "group:admin allow list,add_file,search,add_subdirectory,delete_child,readattr,writeattr,readextattr,writeextattr,readsecurity,file_inherit,directory_inherit" /Users/shufflebar/Music
+
+chmod +a "group:daemon allow list,add_file,search,add_subdirectory,delete_child,readattr,writeattr,readextattr,writeextattr,readsecurity,file_inherit,directory_inherit" /Users/shufflebar/Music
+
+sudo dseditgroup -o edit -a daemon -t user admin
+sudo dseditgroup -o edit -a daemon -t user wheel

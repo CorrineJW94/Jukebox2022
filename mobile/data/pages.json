@@ -1,0 +1,14 @@
+{
+    "siteSections" :
+    [
+        {
+        "id":"page1", 
+        "url":"pages/page1.html"
+        },
+
+        {
+        "id":"page2",  
+        "url":"pages/page2.html"
+        }
+    ]
+}

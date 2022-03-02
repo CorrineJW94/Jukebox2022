@@ -1,0 +1,27 @@
+1.3.3
+=====
+* change scroll behaviour to fix issues in newer browsers, this is slightly more complex, but allows the system to continue to function as previously on modern browsers
+
+1.3.2
+=====
+* add option to upload menu
+* add ability to add songs to playlist by year
+* tweak CSS and iconography
+* tweak current playback information meta storage solution to make it non session based
+
+1.3.0
+=====
+* add credit system
+* add user names and cookie tracking
+* add sugestion box
+* re enable swear filter fro user names (initially created for custom messages in the base system)
+
+1.2.0
+=====
+* ES Updated syetem spec
+* Improve speed and stability
+* split initial load from full page to API appreach for song list loading speed
+
+1.0.0
+=====
+* initial release from system designer
